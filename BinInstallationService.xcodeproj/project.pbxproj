@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		46D3418FECAA81BB0B1E84BA /* libPods-BinInstallationService.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B7EF8641A2E793030971B3A /* libPods-BinInstallationService.a */; };
 		6538CA3E21EE05E900206F64 /* BinInstallationService.h in Headers */ = {isa = PBXBuildFile; fileRef = 6538CA3C21EE05E900206F64 /* BinInstallationService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6538CA5B21EE10A700206F64 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6538CA5A21EE10A700206F64 /* LoginService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +17,7 @@
 		6538CA3921EE05E900206F64 /* BinInstallationService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BinInstallationService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6538CA3C21EE05E900206F64 /* BinInstallationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BinInstallationService.h; sourceTree = "<group>"; };
 		6538CA3D21EE05E900206F64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6538CA5A21EE10A700206F64 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
 		81B8E9326DD246D92F1D2131 /* Pods-BinInstallationService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinInstallationService.debug.xcconfig"; path = "Target Support Files/Pods-BinInstallationService/Pods-BinInstallationService.debug.xcconfig"; sourceTree = "<group>"; };
 		E13448DD802AE219F4FD755C /* Pods-BinInstallationService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BinInstallationService.release.xcconfig"; path = "Target Support Files/Pods-BinInstallationService/Pods-BinInstallationService.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -38,7 +40,6 @@
 				81B8E9326DD246D92F1D2131 /* Pods-BinInstallationService.debug.xcconfig */,
 				E13448DD802AE219F4FD755C /* Pods-BinInstallationService.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -71,10 +72,19 @@
 		6538CA3B21EE05E900206F64 /* BinInstallationService */ = {
 			isa = PBXGroup;
 			children = (
+				6538CA5921EE109300206F64 /* Login */,
 				6538CA3C21EE05E900206F64 /* BinInstallationService.h */,
 				6538CA3D21EE05E900206F64 /* Info.plist */,
 			);
 			path = BinInstallationService;
+			sourceTree = "<group>";
+		};
+		6538CA5921EE109300206F64 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6538CA5A21EE10A700206F64 /* LoginService.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,6 +131,7 @@
 				TargetAttributes = {
 					6538CA3821EE05E900206F64 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -181,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6538CA5B21EE10A700206F64 /* LoginService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +325,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 81B8E9326DD246D92F1D2131 /* Pods-BinInstallationService.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -329,6 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.smartsensor.bin.service.BinInstallationService;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -338,6 +352,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E13448DD802AE219F4FD755C /* Pods-BinInstallationService.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
