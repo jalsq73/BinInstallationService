@@ -1,0 +1,6 @@
+module Pods_BinInstallationService {
+  umbrella header "Pods-BinInstallationService-umbrella.h"
+
+  export *
+  module * { export * }
+}

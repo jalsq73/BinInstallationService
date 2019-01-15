@@ -1,0 +1,1 @@
+/Users/andre/Desktop/BinInstallationService/Pods/Target Support Files/Alamofire/Alamofire-umbrella.h
